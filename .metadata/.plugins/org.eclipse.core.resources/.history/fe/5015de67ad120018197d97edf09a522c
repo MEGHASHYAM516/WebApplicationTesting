@@ -1,0 +1,67 @@
+package com.TestNG;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class TestAllLinksOfNewTourWebsite 
+{
+	FirefoxDriver driver;
+
+	
+	
+	@BeforeMethod
+	public void LaunchBrowser()
+	{
+		driver = new FirefoxDriver();
+		driver.get("http://newtours.demoaut.com");
+		
+	}
+	
+	@Test(priority=1)
+	public void FindLinks()
+	{
+	List<WebElement>links=driver.findElements(By.tagName("a"));
+	System.out.println(links.size());
+	for(int a=0;a<links.size();a++)
+	{
+		String LinkName=links.get(a).getText();
+		System.out.println(a+" "+LinkName);
+		links.get(a).click();
+		
+		
+	}
+	}
+	
+	@Test(priority=2)
+	public void GetTheLinkNames()
+	{
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		System.out.println();
+		
+	}
+	
+	@Test(priority=3)		
+	public void DriverNavigateBack()
+	{
+		List<WebElement>links=driver.findElements(By.tagName("a"));
+		driver.navigate().back();
+		links=driver.findElements(By.tagName("a"));
+		
+	}
+	@AfterMethod
+	
+	public void Close()
+	{
+	driver.close();
+	
+
+}
+}

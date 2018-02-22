@@ -1,0 +1,10 @@
+package runner;
+
+import cucumber.api.junit.Cucumber;
+
+@RunWuith(Cucumber.class)
+@Cucumber.Options(features="newTours")
+
+public class TestRunner {
+
+}

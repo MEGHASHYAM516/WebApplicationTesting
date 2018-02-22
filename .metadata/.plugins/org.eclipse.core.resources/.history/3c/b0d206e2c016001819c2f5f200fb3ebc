@@ -1,0 +1,51 @@
+package newToursApplicationLogInTest;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.server.browserlaunchers.Sleeper;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class LogIn 
+{
+	
+	FirefoxDriver  driver;
+	
+	@Given("^Open FireFox Browser and Navigate to NewTours Application$")
+	public void Open_FireFox_Browser_and_Navigate_to_NewTours_Application() throws Throwable
+	{
+		driver = new FirefoxDriver();
+		driver.get("http://newtours.demoaut.com");
+	}
+
+	@When("^User Enters valid Username and Password and Click on SignIn button$")
+	public void User_Enters_valid_Username_and_Password_and_Click_on_SignIn_button() throws Throwable 
+	{
+		driver.findElement(By.name("userName")).sendKeys("tutorial");
+		driver.findElement(By.name("password")).sendKeys("tutorial");
+		
+		Sleeper.sleepTightInSeconds(10);
+		
+		driver.findElement(By.name("login")).click();
+		
+		String ExpectedTitle ="Find";
+		String ActualTitle=driver.getTitle();
+		
+		if(ActualTitle.contains(ExpectedTitle))
+		{
+			System.out.println("User Successfull Logged In -- PASS");
+		}
+		else
+		{
+			System.out.println("User failed to LogIn -- FAIl");
+		}
+	}
+
+	@Then("^User should be able successfully LogIn and CLose the Application$")
+	public void User_should_be_able_successfully_LogIn_and_CLose_the_Application() throws Throwable
+	{
+		driver.close();
+	}
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="28803" started-at="2018-02-21T01:02:23Z" finished-at="2018-02-21T01:02:52Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="28803" started-at="2018-02-21T01:02:23Z" finished-at="2018-02-21T01:02:52Z">
+      <class name="com.DataDriven.NewUserRegistration_ExcelData">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.DataDriven.NewUserRegistration_ExcelData@6cc4c815]" name="setUp" is-config="true" duration-ms="11645" started-at="2018-02-21T06:32:23Z" finished-at="2018-02-21T06:32:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Register()[pri:1, instance:com.DataDriven.NewUserRegistration_ExcelData@6cc4c815]" name="Register" duration-ms="10684" started-at="2018-02-21T06:32:35Z" finished-at="2018-02-21T06:32:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Register -->
+        <test-method status="PASS" signature="UserRegistration()[pri:2, instance:com.DataDriven.NewUserRegistration_ExcelData@6cc4c815]" name="UserRegistration" duration-ms="6405" started-at="2018-02-21T06:32:46Z" finished-at="2018-02-21T06:32:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserRegistration -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.DataDriven.NewUserRegistration_ExcelData@6cc4c815]" name="tearDown" is-config="true" duration-ms="30" started-at="2018-02-21T06:32:52Z" finished-at="2018-02-21T06:32:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.DataDriven.NewUserRegistration_ExcelData -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,19 @@
+package com.TestNG;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+
+public class CaptureFacebookURL 
+{
+	@BeforeTest
+	public void FirefoxBrowserLaunch()
+	{
+		FirefoxDriver driver = new FirefoxDriver();
+		driver.get("https://www.facebook.com");
+	}
+	
+	
+	
+	
+
+}

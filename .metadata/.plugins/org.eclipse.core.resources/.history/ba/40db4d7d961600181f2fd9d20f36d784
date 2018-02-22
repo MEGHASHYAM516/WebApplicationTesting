@@ -1,0 +1,45 @@
+package com.DataDriven;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.server.handler.FindElement;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class NewUserRegistration 
+{
+	FirefoxDriver driver;
+	
+	@BeforeTest
+	public void Setup()
+	{
+		driver = new FirefoxDriver();
+		driver.get("http://newtours.demoaut.com");
+	}
+	
+	@Test(priority=1)
+	public void Register()
+	{
+		driver.findElement(By.linkText("REGISTER")).click();
+	}
+	
+	@Test(priority=2)
+	public void UserRegistration()
+	{
+		driver.findElement(By.name("firstName")).sendKeys("MEGHASHYAM");
+		driver.findElement(By.name("lastName")).sendKeys("R");
+		driver.findElement(By.name("phone")).sendKeys("9885949898");
+		driver.findElement(By.id("userName")).sendKeys("Shyam@gmail.com");
+		driver.findElement(By.name("address1")).sendKeys("Hno:123");
+		driver.findElement(By.name("city")).sendKeys("AUSTIN");
+		driver.findElement(By.name("state")).sendKeys("TEXAS");
+		driver.findElement(By.name("postalCode")).sendKeys("500054");
+		driver.findElement(By.name("country")).sendKeys("INDIA");
+		driver.findElement(By.id("email")).sendKeys("RMS");
+		driver.findElement(By.name("password")).sendKeys("abc123");
+		driver.findElement(By.name("confirmPassword")).sendKeys("abc123");
+		
+		driver.findElement(By.name("register")).click();
+	}
+
+}

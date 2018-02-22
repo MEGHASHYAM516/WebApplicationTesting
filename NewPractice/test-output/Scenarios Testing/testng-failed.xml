@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Scenarios Testing]">
+  <test name="Keyword test(failed)">
+    <classes>
+      <class name="com.Keyword.NewToursRegistrationTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="UserRegistration"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.Keyword.NewToursRegistrationTest -->
+    </classes>
+  </test> <!-- Keyword test(failed) -->
+</suite> <!-- Failed suite [Scenarios Testing] -->

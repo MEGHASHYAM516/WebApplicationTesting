@@ -1,0 +1,16 @@
+
+<suite name="Scenarios Testing">
+  <test name="Keyword test">
+    <classes>
+      <class name="com.Keyword.NewToursRegistrationTest"/>
+    </classes>
+  </test>
+  
+  
+   <test name="TestNG">
+    <classes>
+      <class name="com.TestNG.NavigatingToGmail"/>
+    </classes>
+  </test>
+  
+</suite>

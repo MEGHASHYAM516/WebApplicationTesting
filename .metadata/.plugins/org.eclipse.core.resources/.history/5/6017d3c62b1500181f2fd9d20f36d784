@@ -1,0 +1,7 @@
+<suite name="Scenarios Testing">
+  <test name="KeyWord test">
+    <classes>
+      <class name="com.KeyWord.NewToursLogInTest"/>
+    </classes>
+  </test> 
+</suite> 

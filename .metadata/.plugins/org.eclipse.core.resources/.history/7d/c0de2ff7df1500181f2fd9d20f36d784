@@ -1,0 +1,24 @@
+# name locator for REGISTER Element
+
+Register=REGISTER
+
+# name locator for firstName Element
+
+Firstname=firstName
+
+Lastname=lastName
+
+Phone=phone
+
+Email=userName
+
+Address=address1
+
+City=city
+
+State=state
+
+PostalCode=postalCode
+
+
+
